@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.name = 'ham'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.summary = 'Ham'
   s.description = 'A web-application security scanner framework.'
   s.author = 'James Rose'
