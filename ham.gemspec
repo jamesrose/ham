@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.name = 'ham'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.summary = 'Ham'
-  s.description = 'Ham ham ham ham!'
+  s.description = 'A web-application security scanner framework.'
   s.author = 'James Rose'
   s.email = 'james@jbpr.net'
   s.files = Dir['examples/*/**', 'lib/*/**', 'bin/*']
