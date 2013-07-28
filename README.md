@@ -1,16 +1,18 @@
 # HAM
 
-A web-application security scanning framework.
+A web-application security scanner framework.
 
 ## Installation
 
 Install the gem:
 
+```
   $ gem install ham
+```
 
 ## Usage
 
-`See examples/simple_scanner.rb file`
+See `examples/simple_scanner.rb` file
 
 ## License
 
