@@ -3,7 +3,7 @@ require 'ham'
 class SimpleScanner < Ham::Base
 
   # Set your target hosts here. It will accept a network address with CIDR
-  # notation, a single address or an array of addresses.
+  # notation, a single address or an array of addresses. Required.
   #
   # Example:
   #   '10.10.10.1/28'
@@ -14,12 +14,12 @@ class SimpleScanner < Ham::Base
     '10.10.10.1/28'
   end
 
-  # Set your HTTP headers here.
+  # Set your HTTP headers here. Optional.
   def headers
     { 'Referer' => 'http://www.google.com' }
   end
 
-  # Set your request parameters here.
+  # Set your request parameters here. Optional.
   def params
     { username: 'admin', password: 'admin' }
   end
@@ -32,7 +32,7 @@ class SimpleScanner < Ham::Base
   def scan(host)
     response = post("http://#{host}/path/to/app")
     if response
-      puts 'Compromised!' if response.body.include?(params[:username])
+      puts "Host compromised: #{host}" if response.body.include?(params[:username])
     end
   end
 end
