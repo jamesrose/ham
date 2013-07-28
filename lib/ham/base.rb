@@ -1,3 +1,5 @@
+require 'httparty'
+
 module Ham
   class Base
 
@@ -52,7 +54,7 @@ module Ham
           scanner.send(:scan, host)
         end
       end
-      threads.join
+      threads.each(&:join)
     end
   end
 end

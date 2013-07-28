@@ -11,7 +11,7 @@ class SimpleScanner < Ham::Base
   #   ['174.44.12.1', '12.4.4.5']
   #
   def hosts
-    '10.10.10.1/28'
+    '173.194.41.142/30'
   end
 
   # Set your HTTP headers here. Optional.
@@ -28,11 +28,11 @@ class SimpleScanner < Ham::Base
   # actual HTTP request. Your headers and parameters are injected automatically.
   #
   # Ham doesn't care what you do with the results of the request, but in this
-  # instance we check to see if the username is included in the response body.
+  # instance we check to see if 'Google' is included in the response body.
   def scan(host)
     response = post("http://#{host}/path/to/app")
     if response
-      puts "Host compromised: #{host}" if response.body.include?(params[:username])
+      puts "Host compromised: #{host}" if response.body.include? 'Google'
     end
   end
 end

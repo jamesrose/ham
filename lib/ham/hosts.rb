@@ -14,7 +14,7 @@ module Ham
         raise ArgumentError, "Invalid host format: #{hosts.inspect}"
       end
     end
-    
+
     def each_host(&blk)
       klass = @klass.new(@hosts)
       klass.each_host(&blk)
