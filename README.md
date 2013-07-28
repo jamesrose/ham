@@ -1,4 +1,4 @@
-# HAM
+# Ham
 
 A web-application security scanner framework.
 
@@ -7,7 +7,7 @@ A web-application security scanner framework.
 Install the gem:
 
 ```
-  $ gem install ham
+$ gem install ham
 ```
 
 ## Usage
